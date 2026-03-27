@@ -21,7 +21,9 @@ class main:
         self.movement = [False,False]
 
     def run(self):             
-        while True: 
+        while True:
+            self.screen.fill((14,219,248))
+            self.image_pos[1] += (self.movement[1] - self.movement[0])*5   ## calculations if we press downkey = 260 += (1 - 0)*5 = 265  
             self.screen.blit(self.image,self.image_pos)
             
             for event in pygame.event.get():
@@ -33,13 +35,13 @@ class main:
                     if event.key == pygame.K_UP:
                         self.movement[0] = True
                     if event.key == pygame.K_DOWN:
-                        self.movement[1] == True
+                        self.movement[1] = True
                 
                 if event.type == pygame.KEYUP:
                     if event.key == pygame.K_UP:
                         self.movement[0] = False
                     if event.key == pygame.K_DOWN:
-                        self.movement[1] == False
+                        self.movement[1] = False
             
             self.clock.tick(60)
             pygame.display.update()
