@@ -20,13 +20,13 @@ class game:
             'player' : load_image('entities/player.png')
         }
 
-        self.player = PhysicsEntity(self, 'player', (50,50),(8,15))
+        self.player = PhysicsEntity(self, 'player', (50,50),(8,15)) # Calling PhyscisEntity Class (self, game, e_type, pos, size)
 
     def run(self):             
         while True:
             self.screen.fill((14,219,248))
 
-            self.player.update((self.movement[1]-self.movement[0],0)) 
+            self.player.update((self.movement[1]-self.movement[0],0)) # (x,y)
 
             self.player.render(self.screen)
             
