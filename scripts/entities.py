@@ -15,5 +15,7 @@ class PhysicsEntity:
         self.pos[0] += frame_movement[0]*5 # updating x position the of entity
         self.pos[1] += frame_movement[1] # updating y postiton of the entity
 
+        self.velocity[1] = min(5,self.velocity[1] +0.1) # Created a limit of 5 for smooth falling
+
     def render(self,surf):
         surf.blit(self.game.assets['player'],self.pos)  # (img/source,position)
