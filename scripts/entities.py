@@ -12,7 +12,7 @@ class PhysicsEntity:
     def update(self,movement = (0,0)):
         frame_movement = (movement[0] + self.velocity[0], movement[1] + self.velocity[1]) # so here we are giving frame movement its (x,y) 
 
-        self.pos[0] += frame_movement[0]*10 # updating x position the of entity
+        self.pos[0] += frame_movement[0]*5 # updating x position the of entity
         self.pos[1] += frame_movement[1] # updating y postiton of the entity
 
     def render(self,surf):
