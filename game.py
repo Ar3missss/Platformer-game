@@ -42,7 +42,7 @@ class Game:
 
             self.tilemap.render(self.display)
 
-            self.player.update((self.movement[1]-self.movement[0],0)) # (x,y)
+            self.player.update(self.tilemap,(self.movement[1]-self.movement[0],0)) # (x,y)
 
             self.player.render(self.display) # self.player is a physicsEntity object so this object has access to render() and update() methods
             
